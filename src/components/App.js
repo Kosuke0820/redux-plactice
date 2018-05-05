@@ -1,8 +1,8 @@
 import React from 'react';
 
-const App = ({ number, plus, minus }) => (
+const App = ({ number, title, day, plus, minus }) => (
   <div>
-    <h2>{number}</h2>
+    <h2>{title} {day} {number}</h2>
     <button onClick={() => plus(1)}>+</button>
     <button onClick={() => minus(1)}>-</button>
   </div>

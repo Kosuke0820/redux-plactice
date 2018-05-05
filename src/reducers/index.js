@@ -1,12 +1,11 @@
-const reducer = (state = 0, action) => {
-  switch(action.type) {
-    case 'PLUS':
-      return state + action.payload.num;
-    case 'MINUS':
-      return state - action.payload.num;
-    default:
-      return state;
-  }
-}
+import { combineReducers } from "redux";
 
-export default reducer;
+import number from './number';
+import title from './title';
+import day from './day';
+
+export default combineReducers({
+  number,
+  title,
+  day
+})
