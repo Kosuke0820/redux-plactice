@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import App from '../components/App';
-import { plus, minus } from '../actions';
+import { plus, minus, asyncMinus } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -18,6 +18,9 @@ const mapDispatchToProps = dispatch => {
     },
     minus: num => {
       dispatch(minus(num));
+    },
+    asyncMinus: num => {
+      dispatch(asyncMinus(num));
     }
   }
 }
